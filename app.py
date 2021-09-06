@@ -21,9 +21,8 @@ standard_to = StandardScaler()
 @app.route("/", methods=['POST'])
 def predict():
     if request.method == 'POST':
-
-        #with open("C:\\Users\\g\\Desktop\\test_file4.csv") as file:
-        with open("C:\\Users\\ss\\PycharmProjects\\Battery_life\\test_files\\test_file1.csv") as file:
+        
+        with open(csvfile) as file:
             reader = csv.DictReader(file)
             resp = request.form
             for row in reader:
